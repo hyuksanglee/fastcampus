@@ -1,30 +1,26 @@
-package kr.co.fastcampus.part4plus.movieapp.ui.components.dialog
+package kr.co.fastcampus.part4plus.restaurantapp.ui.components.dialog
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.padding
-import androidx.compose.foundation.shape.CornerBasedShape
 import androidx.compose.material.Card
-import androidx.compose.material.ExperimentalMaterialApi
 import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
-import androidx.compose.ui.unit.Dp
-import kr.co.fastcampus.part4plus.movieapp.ui.components.dialog.components.button.DialogButtonsColumn
-import kr.co.fastcampus.part4plus.movieapp.ui.components.dialog.components.content.DialogContentWrapper
-import kr.co.fastcampus.part4plus.movieapp.ui.components.dialog.components.title.DialogTitleWrapper
-import kr.co.fastcampus.part4plus.movieapp.ui.models.dialog.DialogButton
-import kr.co.fastcampus.part4plus.movieapp.ui.models.dialog.DialogContent
-import kr.co.fastcampus.part4plus.movieapp.ui.models.dialog.DialogText
-import kr.co.fastcampus.part4plus.movieapp.ui.models.dialog.DialogTitle
-import kr.co.fastcampus.part4plus.movieapp.ui.theme.MovieAppTheme
-import kr.co.fastcampus.part4plus.movieapp.ui.theme.Paddings
-import kr.co.fastcampus.part4plus.movieapp.ui.theme.colorScheme
+import kr.co.fastcampus.part4plus.restaurantapp.ui.components.dialog.components.button.DialogButtonsColumn
+import kr.co.fastcampus.part4plus.restaurantapp.ui.components.dialog.components.content.DialogContentWrapper
+import kr.co.fastcampus.part4plus.restaurantapp.ui.components.dialog.components.title.DialogTitleWrapper
+import kr.co.fastcampus.part4plus.restaurantapp.ui.models.dialog.DialogButton
+import kr.co.fastcampus.part4plus.restaurantapp.ui.models.dialog.DialogContent
+import kr.co.fastcampus.part4plus.restaurantapp.ui.models.dialog.DialogText
+import kr.co.fastcampus.part4plus.restaurantapp.ui.models.dialog.DialogTitle
+import kr.co.fastcampus.part4plus.restaurantapp.ui.theme.Paddings
+import kr.co.fastcampus.part4plus.restaurantapp.ui.theme.RestaurantAppTheme
+import kr.co.fastcampus.part4plus.restaurantapp.ui.theme.colorScheme
 
-@OptIn(ExperimentalMaterialApi::class)
 @Composable
 fun BaseDialogPopup(
     dialogTitle: DialogTitle? = null,
@@ -58,13 +54,12 @@ fun BaseDialogPopup(
             }
         }
     }
-
 }
 
 @Preview
 @Composable
 fun BaseDialogPopupPreview() {
-    MovieAppTheme {
+    RestaurantAppTheme {
         BaseDialogPopup(
             dialogTitle = DialogTitle.Header("TITLE"),
             dialogContent = DialogContent.Large(
@@ -80,7 +75,7 @@ fun BaseDialogPopupPreview() {
 @Preview
 @Composable
 fun BaseDialogPopupPreview2() {
-    MovieAppTheme {
+    RestaurantAppTheme {
         BaseDialogPopup(
             dialogTitle = DialogTitle.Large("TITLE"),
             dialogContent = DialogContent.Default(
@@ -97,7 +92,7 @@ fun BaseDialogPopupPreview2() {
 @Preview
 @Composable
 fun BaseDialogPopupPreview3() {
-    MovieAppTheme {
+    RestaurantAppTheme {
         BaseDialogPopup(
             dialogTitle = DialogTitle.Large("TITLE"),
             dialogContent = DialogContent.Rating(
